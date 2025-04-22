@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletTransfer.Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletTransfer.Infrastructure", "WalletTransfer.Infrastructure\WalletTransfer.Infrastructure.csproj", "{D89062AA-99D3-4FB6-910E-8BB6207D8081}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletTransfer.Application.Tests", "WalletTransfer.Application.Tests\WalletTransfer.Application.Tests.csproj", "{3E2C3DAF-30FA-4FBA-BEAC-D22A297E597C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletTransfer.Infrastructure.Tests", "WalletTransfer.Infrastructure.Tests\WalletTransfer.Infrastructure.Tests.csproj", "{F1967C5E-607F-4F4A-BAAA-DD724C6B3DF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{D89062AA-99D3-4FB6-910E-8BB6207D8081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D89062AA-99D3-4FB6-910E-8BB6207D8081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D89062AA-99D3-4FB6-910E-8BB6207D8081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E2C3DAF-30FA-4FBA-BEAC-D22A297E597C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2C3DAF-30FA-4FBA-BEAC-D22A297E597C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2C3DAF-30FA-4FBA-BEAC-D22A297E597C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2C3DAF-30FA-4FBA-BEAC-D22A297E597C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1967C5E-607F-4F4A-BAAA-DD724C6B3DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1967C5E-607F-4F4A-BAAA-DD724C6B3DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1967C5E-607F-4F4A-BAAA-DD724C6B3DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1967C5E-607F-4F4A-BAAA-DD724C6B3DF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

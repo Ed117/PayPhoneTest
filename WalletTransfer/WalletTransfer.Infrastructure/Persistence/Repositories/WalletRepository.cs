@@ -32,6 +32,7 @@ namespace WalletTransfer.Infrastructure.Persistence.Repositories
 
         public async Task UpdateAsync(Wallet wallet)
         {
+            ArgumentNullException.ThrowIfNull(wallet);
             _context.Wallets.Update(wallet);
             await Task.CompletedTask;
         }
