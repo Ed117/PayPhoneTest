@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "d6f46643-f784-4d8e-ac97-88d9827f46f7",
+		"name": "WalletTransfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5280558"
+	},
+	"item": [
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "1.Consultas",
+					"item": [
+						{
+							"name": "ObtenerTodasLasWallets",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7233/api/Wallet",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallet"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitosa",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 18:49:48 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"documentId\": \"12345678\",\n        \"ownerName\": \"Alice Smith\",\n        \"balance\": 1000,\n        \"createdAt\": \"2025-04-22T10:21:30.381208\",\n        \"updatedAt\": \"2025-04-22T10:21:30.381208\"\n    },\n    {\n        \"id\": 2,\n        \"documentId\": \"87654321\",\n        \"ownerName\": \"Bob Johnson\",\n        \"balance\": 500,\n        \"createdAt\": \"2025-04-22T10:21:30.381208\",\n        \"updatedAt\": \"2025-04-22T10:21:30.381208\"\n    },\n    {\n        \"id\": 3,\n        \"documentId\": \"11223344\",\n        \"ownerName\": \"Carlos Méndez\",\n        \"balance\": 750.5,\n        \"createdAt\": \"2025-04-22T10:21:30.381208\",\n        \"updatedAt\": \"2025-04-22T10:21:30.381208\"\n    },\n    {\n        \"id\": 4,\n        \"documentId\": \"44332211\",\n        \"ownerName\": \"Diana López\",\n        \"balance\": 1200,\n        \"createdAt\": \"2025-04-22T10:21:30.381208\",\n        \"updatedAt\": \"2025-04-22T10:21:30.381208\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "ObtenerUnaWallet",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7233/api/Wallet/1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallet",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitoso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet/1",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:13:11 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"documentId\": \"12345678\",\n    \"ownerName\": \"Alice Smith\",\n    \"balance\": 1000,\n    \"createdAt\": \"2025-04-22T10:21:30.381208\",\n    \"updatedAt\": \"2025-04-22T10:21:30.381208\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "2.Crear",
+					"item": [
+						{
+							"name": "CrearUnaWallet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"documentId\": \"99887766\",\r\n  \"ownerName\":  \"Edward Muñoz\",\r\n  \"initialBalance\": 3200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7233/api/Wallet",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallet"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitoso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"documentId\": \"99887766\",\r\n  \"ownerName\":  \"Edward Muñoz\",\r\n  \"initialBalance\": 3200\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:17:07 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Location",
+											"value": "https://localhost:7233/api/Wallet/5"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "5"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "3.Actualizar",
+					"item": [
+						{
+							"name": "ActualiceUnaWallet",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"documentId\": \"122223333\",\r\n    \"ownerName\": \"Edward Muñoz Garro\",\r\n    \"balance\": 3200.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:7233/api/Wallet/6",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallet",
+										"6"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitoso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": 6,\r\n    \"documentId\": \"122223333\",\r\n    \"ownerName\": \"Edward Muñoz Garro\",\r\n    \"balance\": 3200.00\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet/6",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet",
+												"6"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:30:31 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "4.Eliminar",
+					"item": [
+						{
+							"name": "EliminarUnaWallet",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7233/api/Wallet/5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallet",
+										"5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitoso",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet/5",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet",
+												"5"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:25:42 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "WalletNotFound",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet/100",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet",
+												"100"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:38:59 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "System.Collections.Generic.KeyNotFoundException: Wallet 100 not found\r\n   at WalletTransfer.Application.Services.WalletService.DeleteAsync(Int32 id) in C:\\RepositoriosGitHub\\PayPhoneTest\\WalletTransfer\\WalletTransfer.Application\\Services\\WalletService.cs:line 38\r\n   at WalletTransfer.API.Controllers.WalletController.Delete(Int32 id) in C:\\RepositoriosGitHub\\PayPhoneTest\\WalletTransfer\\WalletTransfer.API\\Controllers\\WalletController.cs:line 53\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\r\n\r\nHEADERS\r\n=======\r\nAccept: */*\r\nConnection: keep-alive\r\nHost: localhost:7233\r\nUser-Agent: PostmanRuntime/7.43.3\r\nAccept-Encoding: gzip, deflate, br\r\nPostman-Token: 45ec40c8-eb56-4af0-9b59-7c1968b5ac48\r\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "6.TranferirFondos",
+					"item": [
+						{
+							"name": "TransferirFondosEntreWallets",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7233/api/Wallet/1/transfer/3?amount=100",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallet",
+										"1",
+										"transfer",
+										"3"
+									],
+									"query": [
+										{
+											"key": "amount",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitoso",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet/1/transfer/3?amount=100",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet",
+												"1",
+												"transfer",
+												"3"
+											],
+											"query": [
+												{
+													"key": "amount",
+													"value": "100"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:33:59 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										}
+									],
+									"cookie": [],
+									"body": null
+								},
+								{
+									"name": "BalanceInsuficiente",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallet/1/transfer/3?amount=100000000",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallet",
+												"1",
+												"transfer",
+												"3"
+											],
+											"query": [
+												{
+													"key": "amount",
+													"value": "100000000"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:38:14 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "System.InvalidOperationException: Insufficient balance\r\n   at WalletTransfer.Application.Services.WalletService.TransferAsync(Int32 fromWalletId, Int32 toWalletId, Decimal amount) in C:\\RepositoriosGitHub\\PayPhoneTest\\WalletTransfer\\WalletTransfer.Application\\Services\\WalletService.cs:line 89\r\n   at WalletTransfer.API.Controllers.WalletController.Transfer(Int32 fromId, Int32 toId, Decimal amount) in C:\\RepositoriosGitHub\\PayPhoneTest\\WalletTransfer\\WalletTransfer.API\\Controllers\\WalletController.cs:line 60\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)\r\n   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\r\n\r\nHEADERS\r\n=======\r\nAccept: */*\r\nConnection: keep-alive\r\nHost: localhost:7233\r\nUser-Agent: PostmanRuntime/7.43.3\r\nAccept-Encoding: gzip, deflate, br\r\nContent-Length: 0\r\nPostman-Token: 970bd1ff-1d62-4a36-b337-2e7e48d108e7\r\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "7.Historial",
+					"item": [
+						{
+							"name": "ConsultarHistorialDeTransacciones",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:7233/api/Wallets/1/TransactionHistory",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7233",
+									"path": [
+										"api",
+										"Wallets",
+										"1",
+										"TransactionHistory"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Exitoso-Wallet1",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallets/1/TransactionHistory",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallets",
+												"1",
+												"TransactionHistory"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:36:03 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 8,\n        \"walletId\": 1,\n        \"amount\": 100,\n        \"type\": \"Debit\",\n        \"createdAt\": \"2025-04-22T19:34:00.302248\"\n    },\n    {\n        \"id\": 1,\n        \"walletId\": 1,\n        \"amount\": 1000,\n        \"type\": \"Credit\",\n        \"createdAt\": \"2025-04-22T10:21:30.395755\"\n    },\n    {\n        \"id\": 2,\n        \"walletId\": 1,\n        \"amount\": 200,\n        \"type\": \"Debit\",\n        \"createdAt\": \"2025-04-22T10:21:30.395755\"\n    }\n]"
+								},
+								{
+									"name": "Exitoso-Wallet3",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7233/api/Wallets/3/TransactionHistory",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7233",
+											"path": [
+												"api",
+												"Wallets",
+												"3",
+												"TransactionHistory"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Apr 2025 19:36:40 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 9,\n        \"walletId\": 3,\n        \"amount\": 100,\n        \"type\": \"Credit\",\n        \"createdAt\": \"2025-04-22T19:34:00.312955\"\n    },\n    {\n        \"id\": 4,\n        \"walletId\": 3,\n        \"amount\": 300,\n        \"type\": \"Credit\",\n        \"createdAt\": \"2025-04-22T10:21:30.395755\"\n    },\n    {\n        \"id\": 5,\n        \"walletId\": 3,\n        \"amount\": 50.25,\n        \"type\": \"Debit\",\n        \"createdAt\": \"2025-04-22T10:21:30.395755\"\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
