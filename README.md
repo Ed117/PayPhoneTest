@@ -1,3 +1,7 @@
+<p align="center">
+  <img src=".github/assets/banner.png" alt="WalletTransfer API" width="100%" />
+</p>
+
 #PayPhoneTest
 
 PayPhoneTest es una API REST desarrollada en .NET 8 (C#) siguiendo los principios de Clean Architecture para gestionar transferencias de saldo entre billeteras en dólares.
